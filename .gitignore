@@ -1,3 +1,4 @@
-/.vscode
-/engine/private/*
 /exams/private/*
+/engine/private/*
+/engine/__pycache__/*
+.vscode/*
