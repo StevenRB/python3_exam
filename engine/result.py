@@ -1,10 +1,8 @@
 import sys
 sys.path.insert(0, '../engine/')
-
-# import exam_scrambler
 import exam_helpers
 
-def result(exam):
+def generate(exam):
 	name = input('What is your name? >> ')
 	print('\n')
 	
@@ -20,7 +18,7 @@ def result(exam):
 
 	score = 0
 	for k,v in res.items():
-		print(k, ":")
+		print(k, ":", exam[k]['question'])
 		print("Your Answer:", v['student_answer'])
 		print("Correct Answer:", v['right_answer'])
 		print("Points Gained:", float(v['points_gained']))
