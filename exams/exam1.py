@@ -1,42 +1,9 @@
 import sys
 sys.path.insert(0, '../engine/')
 
-import exam_scrambler
-import exam_helpers
-
-name = input('What is your name?')
+import result
 
 # Use and scramber and put the result here
-exam = {}
+exam = {'question 1': {'question': 'Names a difference between a list and a dicitonary', 'question_type': 'Multiple Choice', 'options': ({'letter': 'A', 'answer': ('z@OFN-pP?rN>KT_Bl]ES}XVmUQsSXwMWyUYs65r*9t', [83, -20, -73]), 'w': ('#', [-83, 94, 14])}, {'letter': 'B', 'answer': ('>o8)n22p!4j-"i^&kT$n;*G>]D/}B@bv?dD[bCihJ ', [-51, 6, -53]), 'w': ('~', [40, 2, -29])}, {'letter': 'C', 'answer': ('Dvxt|{q]bo~fi}hq hGgaJkcuotMyeJClIPpKu%JRFMO', [-95, 13, 21]), 'w': ('O', [-12, -12, 13])}, {'letter': 'D', 'answer': ('*]j=rl>zn<SK)CF:iw<PCdSRaNX~U1^T3aVXl"#v2Wq9', [-61, 78, -9]), 'w': ('1', [-94, 57, 46])}), 'right_answer': ('R', [-79, -93, -92]), 'point': 3.0}, 'question 2': {'question': 'Which function would you use to add a value to a list at any given location?', 'question_type': 'Multiple Choice', 'options': ({'letter': 'A', 'answer': ('5-47R=!', [40, -25, -60]), 'w': ('t', [-33, 57, -24])}, {'letter': 'B', 'answer': ('Pdh!', [36, 90, -6]), 'w': ('C', [71, -57, 52])}, {'letter': 'C', 'answer': ("cc%kD'", [89, -11, 48]), 'w': ('*', [-77, -44, 94])}, {'letter': 'D', 'answer': ('-0[H=', [66, -56, 81]), 'w': ('V', [90, -8, -88])}), 'right_answer': ('#', [36, 44, -16]), 'point': 3.0}, 'question 3': {'question': 'Explain how to find the number of items in a list? ', 'question_type': 'Multiple Choice', 'options': ({'letter': 'A', 'answer': ('s6{B.sJ6sV?DP?u7+wW|NW~L"{m', [67, -55, -9]), 'w': ('$', [13, -70, 65])}, {'letter': 'B', 'answer': ('DZnq?ay$sF+sH*hX_hZ]wW', [78, 33, -86]), 'w': ('W', [91, 90, 24])}, {'letter': 'C', 'answer': (">-s77{&Q~)2a/'|:+n:-l}*", [35, -39, 14]), 'w': ('}', [40, -42, -78])}, {'letter': 'D', 'answer': ("V=C~1=gK^j1\\BY>q%dq'bF$", [-94, 62, -71]), 'w': ('t', [-34, 19, -7])}), 'right_answer': ('x', [89, -24, -90]), 'point': 3.0}, 'question 4': {'question': "Which print statement would return 'J' in if fisted = [ “Punch”, “Kick”, “Jab”]", 'question_type': 'Multiple Choice', 'options': ({'letter': 'A', 'answer': ('Fo8}xt^p%jo2:$T%', [16, 92, -43]), 'w': ('Z', [-1, 31, -75])}, {'letter': 'B', 'answer': ('#9I7*T2"}*!=St!XN', [49, 44, -69]), 'w': ('t', [62, 71, -12])}, {'letter': 'C', 'answer': ('b:LVW}PYb#Nb49m3X', [56, 62, 18]), 'w': ('>', [28, 46, -20])}, {'letter': 'D', 'answer': ('EaT~LI_D>kC(;=8>?")', [15, 78, 37]), 'w': ('_', [-59, -1, -92])}), 'right_answer': ('|', [63, 13, -52]), 'point': 3.0}, 'question 5': {'question': 'Type the sentence number with the correct statement 1,2,3, or 4.', 'question_type': 'Multiple Choice', 'options': ({'letter': 'A', 'answer': ('rTq-ZeNJ UKfUX~Y!pY5i#1c\'8y<,i:.l((r_+G\\&M@-Q:,S\\.QjdH_~O`]Ra_!taSxg0gfZDf1FB*Hp"sK*Py-Mt_JB[EI~HX|NN>1P_RNdYOd!RK47p+-<', [59, 65, -78]), 'w': ('c', [45, 4, 46])}, {'letter': 'B', 'answer': ('\\0bhSt&Co-Du-Qn;3E;Yx}Urj$Ke0Q{$S~5Me/Pt,Kz*RD$QF,SD}&u/!B:3E@5Xh#Fl)N`(Mr(Ot|6v<Ygf6D_9A@.x|*sd=va+zo-Ge+Ql,Qx/.r}2Hmx', [31, 72, -93]), 'w': ('%', [-81, -76, -65])}, {'letter': 'C', 'answer': ('=|Lnf;,[,=\\<=d+[q`[l?dh/hodsB?qD\\ix|BAlyvrwCvqBxyDvR0mBVtCOwIQP1Xx53FO2E"2G$/Y&#Q0\\Y.,1+\'&(/"#@+&=#* %;[#_|$_i\'Ac[fse(d', [25, 16, 38]), 'w': ('5', [4, 42, 8])}, {'letter': 'D', 'answer': ("*01tK3iUU^P1_V1gO5t55oY*kS?C$.z5_o'{r8[x<^M/?S-`W'_Y/{S^l7ccR}jS\\mY^F( n,fv4eu<ew>AO@oG'JO|xR_s5\\A1=H!@W8`MYiO5~M&fN&rQfl6<B,Wm", [15, -23, -41]), 'w': ('"', [11, -40, 80])}), 'right_answer': ('N', [-84, -57, 93]), 'point': 3.0}}
 
-result = exam_helpers.answer_eval(exam)
-
-
-
-
-
-
-
-
-
-# -------------------------------
-
-print('Here are your results')
-
-max_score = 0
-for k,v in exam:
-	max_score += v['points']
-
-score = 0
-for k,v in result.items():
-	print(k, ":")
-	print("Your Answer:", v['student_answer'])
-	print("Correct Answer:", v['right_answer'])
-	print("Points Gained:", float(v['points_gained']))
-	print('--')
-
-	score+=float(v['points_gained'])
-
-print("----------")
-print("Final score: ", score, " out of ", max_score)
-
+result = result.result(exam)
