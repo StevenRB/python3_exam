@@ -31,7 +31,7 @@ def scrambler(msg):
 		for x in range(len(msg) - len(key)):
 			if x<len(key): k=x
 			else: k=x%len(key)
-			new_key.append(x-key[k])
+			new_key.append(key[k])
 	
 	
 	for n in range(len(msg)):
@@ -55,7 +55,7 @@ def descrambler(msg, key):
 		for x in range(len(msg) - len(key)):
 			if x<len(key): k=x
 			else: k=x%len(key)
-			new_key.append(-(key[k]-x))
+			new_key.append(key[k])
 
 	for n in range(len(msg)):
 		enc_index = encryption_lib.index(msg[n])
