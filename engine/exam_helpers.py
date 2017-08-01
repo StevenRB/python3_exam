@@ -1,4 +1,4 @@
-from exam_scambler import descrambler
+from exam_scrambler import descrambler
 
 def quizzer(exam_dct):
     '''returns student answer, the right answer and point gained'''
@@ -10,11 +10,14 @@ def quizzer(exam_dct):
         for option in dct_val['options']:
             print(option['letter']+")", descrambler(option['answer'][0], option['answer'][1]))
 
+        print('\n')
         student_a = input('Enter your answer: ')
+        
+        print('\n')
         results[question_num] = {
-                                 'student answer' : student_a, 
-                                 'right_answer' : question_num['right_answer'],
-                                 'point_gained' : answer_eval(student_a, dct_val)
+                                 'student_answer' : student_a, 
+                                 'right_answer' : descrambler(dct_val['right_answer'][0], dct_val['right_answer'][1]),
+                                 'points_gained' : answer_eval(student_a, dct_val)
                                 }
 
     return results
